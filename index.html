@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE Research Paper Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/7/7a/IEEE_logo.svg">
+    <style>
+        body { font-family: 'Inter', Arial, sans-serif; }
+        .fade-in { animation: fadeIn 1s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .btn-animate:active { transform: scale(0.97); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    </style>
+</head>
+
+<body class="min-h-screen w-full bg-gradient-to-br from-[#00629B] via-[#00B4D8] to-[#90E0EF] flex flex-col justify-between">
+    <header class="w-full py-8 flex flex-col items-center fade-in">
+        <h1 class="text-5xl font-extrabold text-white drop-shadow-lg tracking-tight mb-2 text-center">IEEE Research Paper Generator</h1>
+        <p class="text-lg text-white/80 text-center mb-2">Generate plagiarism-free IEEE-formatted papers in seconds.</p>
+    </header>
+    <main class="flex-1 flex flex-col items-center justify-center">
+        <div class="relative w-full max-w-xl mx-auto">
+            <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#00B4D8] via-[#48CAE4] to-[#0077B6] blur-xl opacity-40 animate-pulse"></div>
+            <div class="relative bg-white rounded-3xl shadow-2xl p-10 flex flex-col items-center">
+                <form id="paperForm" class="w-full space-y-8">
+                    <label for="title" class="block text-xl font-bold text-[#00629B] mb-2">Paper Title</label>
+                    <input type="text" name="title" id="title" required placeholder="Enter your research paper title..." class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8] transition duration-200 text-lg shadow-sm bg-gray-50 placeholder:text-gray-400" />
+                    <button type="submit" class="btn-animate w-full py-4 rounded-xl bg-gradient-to-r from-[#00629B] via-[#00B4D8] to-[#90E0EF] text-white font-bold text-xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-200">Generate Paper</button>
+                </form>
+                <div id="latexOutput" style="display:none;" class="mt-10 w-full">
+                    <h2 class="text-2xl font-bold text-[#00629B] mb-4 text-center">Generated LaTeX Code</h2>
+                    <textarea id="latexCode" class="w-full h-72 p-4 rounded-xl border-2 border-gray-200 text-base font-mono bg-gray-100 resize-none focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8] transition duration-200" readonly></textarea>
+                    <button id="downloadLatex" class="btn-animate mt-6 w-full py-3 rounded-xl bg-gradient-to-r from-[#00629B] via-[#00B4D8] to-[#90E0EF] text-white font-bold text-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-200">Download LaTeX (.tex)</button>
+                </div>
+                <div id="status" class="mt-6 text-center text-[#d32f2f] font-semibold"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full text-center py-8 text-white/80 text-base bg-transparent">
+        <span class="inline-block px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md">Powered by Gemini API | © 2025</span>
+    </footer>
+    <script src="../static/script.js"></script>
+</body>
+</html>
