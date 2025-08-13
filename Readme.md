@@ -5,7 +5,6 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.95+-009688?logo=fastapi)
 ![Gemini API](https://img.shields.io/badge/Powered%20by-Gemini%20API-4285F4?logo=google)
 ![LaTeX](https://img.shields.io/badge/Format-IEEE%20LaTeX-008080?logo=latex)
-![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Pull Requests](https://img.shields.io/badge/PRs-Welcome-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-Web-orange)
